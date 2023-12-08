@@ -7,6 +7,9 @@
 
 import Foundation
 
-public enum TrainingType: String, Codable {
-	case running, walking
+public enum TrainingType: String, Codable, CaseIterable, Identifiable {
+	case running = "Correr"
+	case walking = "Caminar"
+	
+	public var id: String { rawValue }
 }
